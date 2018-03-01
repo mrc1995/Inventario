@@ -20,7 +20,10 @@ from Inventario.views import *
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^$',loginstart, name = 'loginstart'),
+    url(r'^loginstart',loginstart, name = 'loginstart'),
+    url(r'^privado$',privado,name = 'privado'),
     url(r'^Ingresarproducto',Ingresarproducto, name = 'Ingresarproducto'),
-    url(r'^modificar',modificar,name = 'modificar'),
+    url(r'^modificarproducto',modificarproducto,name = 'modificarproducto'),
     url(r'^no_existe',no_existe,name = 'no_existe'),
 ]
