@@ -22,8 +22,12 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$',loginstart, name = 'loginstart'),
     url(r'^loginstart',loginstart, name = 'loginstart'),
+    url(r'^endsesion/$',endsesion,name = 'endsesion'),
     url(r'^privado$',privado,name = 'privado'),
     url(r'^Ingresarproducto',Ingresarproducto, name = 'Ingresarproducto'),
     url(r'^modificarproducto',modificarproducto,name = 'modificarproducto'),
     url(r'^no_existe',no_existe,name = 'no_existe'),
+    url(r'^cabecera', cabecera, name = 'cabecera'),
+    url(r'^contenido', contenido, name = 'contenido'),
+    url(r'^desplegar',desplegar,name = 'desplegar'),
 ]

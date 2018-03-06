@@ -80,3 +80,20 @@ def privado(request):
 def endsesion(request):
 	logout(request)
 	return HttpResponseRedirect('/loginstart')
+
+#@login_required(login_url='/ingresar')
+def cabecera(request):
+	username = request.user
+	return render(request,'cabecera.html')
+
+#@login_required(login_url='/ingresar')
+def contenido(request):
+	username = request.user
+	return render(request,'contenido.html')
+
+def desplegar(request):
+	context = {}
+	if request.method == "POST":
+		ver_producto = producto.objects.all()
+		context = {"ver_producto":ver_producto}
+	return render (request, 'ver.html',context)

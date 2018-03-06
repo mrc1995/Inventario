@@ -1,17 +1,140 @@
+{% load staticfiles %}
+
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Crear</title>
+	<title>Registro producto</title>
+
+	<meta charset="utf-8">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    
+    
+
+    <link href="https://fonts.googleapis.com/css?family=Acme|Coiny" rel="stylesheet"> 
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<link rel="stylesheet" href="{% static 'css/registrar.css' %}">
+
 </head>
 <body>
-	<h1>Ingresar Producto</h1>
+{% block content %}
+	
+
+	<h1 align="center">Ingresar producto</h1>
+	
+	
 	<form method="POST">
 		{% csrf_token %}
-		<table>
-			{{formulario.as_table}}
+
+	<div id="cajatres">
+
+		<table border="0" align="center">
+
+			<div class="form-group" align="center">
+				<tr>
+					<th>
+						<label for="Nombre_producto">Nombre del producto: </label>
+					</th>
+					<td>
+						<br>
+						<input class="form-control" type="text" name="Nombre_producto" id = "Nombre_producto" required placeholder="Producto" maxlength="35">
+						<br>
+					</td>
+				</tr>
+			
+				<tr>
+					<th>
+						
+						<label for="Precio_compra">Precio de compra: </label>
+					</th>
+					<td>
+						<br>
+						<input class="form-control" type="text" name="Precio_compra" id = "Precio_compra" required placeholder="Precio compra" maxlength="35">
+						<br>
+					</td>
+				</tr>
+
+				<tr>
+					<th>
+					
+						<label for="Precio_venta">Precio de venta: </label>
+					</th>
+					<td>
+						<br>
+						<input class="form-control" type="text" name="Precio_venta" id = "Precio_venta" required placeholder="Precio venta" maxlength="35">
+						<br>
+					</td>
+				</tr>
+
+				<tr>
+					<th>
+						
+						<label for="Existencia_minima">Existencia mínima: </label>
+					</th>
+					<td>
+						<br>
+						<input class="form-control" type="text" name="Existencia_minima" id = "Existencia_minima" required placeholder="Existencia mínima" maxlength="35">
+						<br>
+					</td>
+				</tr>
+
+				
+				<tr>
+					<th>
+						
+						<label for="Existencia_actual">Existencia actual: </label>
+					</th>
+					<td>
+						<br>
+						<input class="form-control" type="text" name="Existencia_actual" id = "Existencia_actual" required placeholder="Existencia actual" maxlength="35">
+						<br>
+					</td>
+				</tr>
+
+				
+				<tr>
+					<th>
+						
+						<label for="Estado">Estado: </label>
+					</th>
+					<td>
+						<br>
+						<select class="form-control" name="Estado" id = "Estado" required maxlength="35">
+			              <option>En existencia</option>
+			              <option>Agotado</option>
+			              <option>Suficiente</option>
+			              <option>Insuficiente</option>
+			              <option>Otro</option>
+			            </select>
+			            <br>
+					</td>
+				</tr>
+
+				<br>
+
+
+			</div>
+			
+			
+
 		</table>
-		<input type="submit" value="crear" />
+
+	</div>
+
+
+
+
+	<div id="boton" align="center">
+	<input  type="submit" value="Guardar"/>
+	</div>
+	<br><br>
+		
 	</form>
-	<a href="javascript:history.go(-1)">Regresar</a>
+	
+
+{% endblock content %}
 </body>
 </html>
+

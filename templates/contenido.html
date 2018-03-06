@@ -1,0 +1,83 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<link href="https://fonts.googleapis.com/css?family=Acme|Coiny" rel="stylesheet"> 
+	<link rel="stylesheet" href="{% static 'css/contenido.css' %}">
+
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
+        <script type="text/javascript">
+            $(function(){
+                //configuraciones
+                var _elem = $('.animar-color');             //usar selector CSS para determinar los elementos a los que se aplica el efecto
+                var _propiedadAAnimar = 'color'             //Propiedad CSS a la que quiero animar el color
+                var _color_new = '#22cbc8';                 //color al que quiero animar
+                var _interval_ = 2000;                      //tiempo de cada parpadeo
+                var _velocidad_ = 600;                      //duración de la animación (el doble de este valor debe ser menor al de _interval)
+                //..
+                var _color_org = _elem.css(_propiedadAAnimar);
+                var animI = {};
+                var animF = {};
+                animI[_propiedadAAnimar] = _color_new;
+                animF[_propiedadAAnimar] = _color_org;
+                setInterval(function(){
+                    _elem.animate(animI,_velocidad_,function(){
+                        _elem.animate(animF,_velocidad_);
+                    });
+                },_interval_);
+            });
+        </script>
+
+
+        <script type="text/javascript">
+        $(function(){
+            //configuraciones
+            var _elem       = $('.animar-entrada');     //usar selector CSS para determinar los elementos a los que se aplica el efecto
+            var _velocidad  = 400;                      //duración de la animación
+            var _demora     = 200;                      //pausa entre cada letra
+            //..
+            _elem.each(function(){
+                //acciones para cada elemento seleccionado
+                var $esto = $(this);
+                var arr_letras = $esto.text().split('');    //dividir el texto letra por letra
+                $esto.html('');                             //vaciar el html del elemento
+                for (var i=0; i<arr_letras.length; i++){    //encerrar cada letra en un <span> con clase especial, solo para identificarla
+                    arr_letras[i] = $('<span class="jq-letra">' + arr_letras[i] + '</span>').hide();    //crear el elemento y ocultarlo
+                    $esto.append(arr_letras[i]);                                                        //agregar elemento al texto
+                    arr_letras[i].delay( i * _demora ).fadeIn(_velocidad);                              //mostrar letra con efecto
+                }
+            });
+        });
+        </script>
+
+
+
+
+
+
+
+
+</head>
+<body>
+
+
+<h1 align="center" class="animar-entrada">¡Bienvenido(a)!</h1>
+
+<h2 align="center" class="animar-color">TODOPLÁSTICOS</h2>
+
+<h3 align="center">Navega por el menú superior</h3>
+
+
+
+<address>
+  <strong>TODOPLÁSTICOS</strong><br>
+  Cra. 23 No. 22-67<br>
+  Local 102 Barrio La Hermosa<br>
+</address>
+
+
+</body>
+</html>

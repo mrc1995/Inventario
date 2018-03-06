@@ -79,7 +79,7 @@ DATABASES = {
         'ENGINE': 'mysql_cymysql',
         'NAME': 'InventarioDB',
         'USER' : 'root',
-        'PASSWORD' : '1111',
+        'PASSWORD' : '12345',
         'HOST': '127.0.0.1',
 
     }
@@ -127,5 +127,5 @@ STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
        os.path.join(BASE_DIR, 'templates'),
-       os.path.join(BASE_DIR,"static"),
+       os.path.join(BASE_DIR,'static'),
    )

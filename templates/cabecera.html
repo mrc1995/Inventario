@@ -1,0 +1,60 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+		<meta charset="utf-8">
+		
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+		
+		<link rel="stylesheet" href="{% static 'css/iconic.css' %}">
+
+		<link rel="stylesheet" href="{% static 'css/style1.css' %}">	
+
+		<!--<script src="prefix-free.js"></script>-->
+	</head>
+
+<body>
+                                            
+			<!--x
+
+	<div class="wrap">
+--> 
+	
+	<nav>
+
+
+		<ul class="menu">
+			<li><a href="{% url 'contenido' %}" target="contenido"><span class="iconic home"></span> Inicio</a></li>
+
+			<li><a href="{% url 'Ingresarproducto' %}" target="contenido"><span class="iconic plus-alt"></span> Ingresar producto</a>
+			</li>
+			
+
+			<li><a href="{% url 'desplegar' %}" target="contenido"><span class="iconic magnifying-glass"></span> Buscar producto</a>
+			</li>
+			
+
+			<li><a href="{% url 'modificarproducto' %}" target="contenido"><span class="iconic map-pin"></span> Modificar producto</a>
+			</li>
+
+			<div class="navbar-right">
+    			<a class="navbar-brand" href="{% url 'endsesion' %}" target="_top">
+       			<span class="glyphicon glyphicon-log-out"></span> Cerrar sesión   
+    			</a>
+    		</div>
+			
+
+		</ul>
+		<div class="clearfix"></div>
+	</nav>
+	</div>
+
+
+
+</body>
+
+</html>

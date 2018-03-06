@@ -1,0 +1,78 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Listar productos</title>
+
+    <meta charset="utf-8">
+    
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    
+    
+    <link href="https://fonts.googleapis.com/css?family=Acme|Coiny" rel="stylesheet"> 
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="{% static 'css/listar.css' %}">
+
+
+
+</head>
+<body>
+
+<form method="POST">
+	{% csrf_token %}
+	
+    <h1 align="center">Inventario</h1>
+    <br>
+    <div align="center" id="buscar">
+    <label>Listar inventario: </label>
+    <button>Ver</button>
+    </div>
+    <br>
+
+<div id="cajatres">
+
+<div class="table-responsive">
+	 <table class="table table-bordered">
+        <tbody>
+             
+
+            
+            <tr>
+                <th>Nombre del producto</th>
+                <th>Precio de compra</th>
+                <th>Precio de Venta</th>
+                <th>Existencia mínima</th>
+                <th>Existencia actual</th>
+                <th>Estado</th>
+                
+            </tr>
+
+            {%for b in ver_producto%}
+                        
+            <tr>
+                
+
+                <td>{{b.Nombre_producto}}</td>
+                <td>{{b.Precio_compra}}</td>
+                <td>{{b.Precio_venta}}</td>
+                <td>{{b.Existencia_minima}}</td>
+                <td>{{b.Existencia_actual}}</td>
+                <td>{{b.Estado}}</td>
+
+
+            </tr>
+           
+            {%endfor%}  
+            
+        
+        </tbody>
+    </table>
+</div>
+</div>	
+</form>
+</body>
+</html>

@@ -1,0 +1,29 @@
+body{
+	
+	background-size: 1340px 550px;
+	background: url(../images/inventario3.jpg) no-repeat;
+
+
+    /*font-family: 'Coiny', cursive;   background: url(../images/inventario.jpg) no-repeat;*/
+
+    font-family: 'Acme', sans-serif;
+    
+    font-size: 20px;
+
+}
+
+#cajatres { 
+	
+	border: 10px groove #6600cc; 
+	padding: 10px ;
+	font-size: 20px;
+}
+
+h1{
+	font-size: 50px;
+	color: #9b03d8;
+}
+
+#buscar{
+	color: #9b03d8;
+}
