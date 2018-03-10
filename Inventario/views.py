@@ -16,7 +16,7 @@ def Ingresarproducto(request):
 		if form_registro_producto.is_valid():
 			newProducto = producto(Nombre_producto = request.POST['Nombre_producto'], Precio_compra =request.POST['Precio_compra'],
 			Precio_venta=request.POST['Precio_venta'],Existencia_minima=request.POST['Existencia_minima'],Existencia_actual=request.POST['Existencia_actual'],
-			Estado=request.POST['Estado'])
+			Estado=request.POST['Estado'], Mult1 = request.POST['Mult1'], Mult2 = request.POST['Mult2'])
 			newProducto.save()
 	else:
 		form_registro_producto = Ingresar_producto()
@@ -36,7 +36,7 @@ def modificarproducto(request):
 			#	print "aqui despues del if"
 				newProducto = producto(Nombre_producto = request.POST['Nombre_producto'], Precio_compra =request.POST['Precio_compra'],
 				Precio_venta=request.POST['Precio_venta'],Existencia_minima=request.POST['Existencia_minima'],Existencia_actual=request.POST['Existencia_actual'],
-				Estado=request.POST['Estado'])
+				Estado=request.POST['Estado'], Mult1 = request.POST['Mult1'], Mult2 = request.POST['Mult2'])
 				newProducto.save()
 		except:
 			return HttpResponseRedirect('no_existe')

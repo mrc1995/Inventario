@@ -13,3 +13,5 @@ class producto(models.Model):
 	Existencia_minima = models.CharField(max_length = 35)
 	Existencia_actual = models.CharField(max_length = 35)
 	Estado = models.CharField(max_length = 35)
+	Mult1 = models.CharField(max_length = 35)
+	Mult2 = models.CharField(max_length = 35)

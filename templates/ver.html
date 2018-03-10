@@ -28,12 +28,22 @@
     <h1 align="center">Inventario</h1>
     <br>
     <div align="center" id="buscar">
+
+
+
+
+
+
+
     <label>Listar inventario: </label>
-    <button>Ver</button>
+    <button onclick="insuficiente()">Ver</button>
+
     </div>
     <br>
 
 <div id="cajatres">
+
+
 
 <div class="table-responsive">
 	 <table class="table table-bordered">
@@ -48,12 +58,16 @@
                 <th>Existencia mínima</th>
                 <th>Existencia actual</th>
                 <th>Estado</th>
+                <th>PC * EA</th>
+                <th>PV * EA</th>
                 
             </tr>
 
             {%for b in ver_producto%}
                         
             <tr>
+
+                
                 
 
                 <td>{{b.Nombre_producto}}</td>
@@ -62,15 +76,26 @@
                 <td>{{b.Existencia_minima}}</td>
                 <td>{{b.Existencia_actual}}</td>
                 <td>{{b.Estado}}</td>
-
+                <td>{{b.Mult1}}</td>
+                <td>{{b.Mult2}}</td>
 
             </tr>
+
+
+                    
+
+
+
            
             {%endfor%}  
-            
-        
+
         </tbody>
-    </table>
+
+
+
+
+
+
 </div>
 </div>	
 </form>

@@ -8,7 +8,7 @@ class Ingresar_producto(forms.ModelForm):
 
 	class Meta:
 		model =  producto
-		fields = ('Nombre_producto','Precio_compra','Precio_venta','Existencia_minima','Existencia_actual','Estado')
+		fields = ('Nombre_producto','Precio_compra','Precio_venta','Existencia_minima','Existencia_actual','Estado','Mult1', 'Mult2')
 
 
 class modificar_producto(forms.Form):
@@ -18,6 +18,9 @@ class modificar_producto(forms.Form):
 	Existencia_minima = forms.CharField(required = True)
 	Existencia_actual = forms.CharField(required = True)
 	Estado= forms.CharField()
+	Mult1 = forms.CharField(required = False)
+	Mult2 = forms.CharField(required = False)
+
 
 class loginForm(forms.Form):
 	username = forms.CharField(max_length=25,required = True)
