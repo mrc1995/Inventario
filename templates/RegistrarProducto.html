@@ -51,7 +51,7 @@
 					</th>
 					<td>
 						<br>
-						<input class="form-control" type="text" name="Precio_compra" id = "Precio_compra" required placeholder="Precio compra" maxlength="35">
+						<input class="form-control" type="text" name="Precio_compra" id = "Precio_compra" required placeholder="Precio compra" maxlength="35" title="Ingrese solo numeros" pattern="[0-9]*">
 						<br>
 					</td>
 				</tr>
@@ -63,7 +63,7 @@
 					</th>
 					<td>
 						<br>
-						<input class="form-control" type="text" name="Precio_venta" id = "Precio_venta" required placeholder="Precio venta" maxlength="35">
+						<input class="form-control" type="text" name="Precio_venta" id = "Precio_venta" required placeholder="Precio venta" maxlength="35" title="Ingrese solo numeros"  pattern="[0-9]*">
 						<br>
 					</td>
 				</tr>
@@ -75,7 +75,7 @@
 					</th>
 					<td>
 						<br>
-						<input class="form-control" type="text" name="Existencia_minima" id = "Existencia_minima" required placeholder="Existencia mínima" maxlength="35">
+						<input class="form-control" type="text" name="Existencia_minima" id = "Existencia_minima" required placeholder="Existencia mínima" maxlength="35" title="Ingrese solo numeros"  title="Ingrese solo numeros"  pattern="[0-9]*" value="10">
 						<br>
 					</td>
 				</tr>
@@ -88,7 +88,7 @@
 					</th>
 					<td>
 						<br>
-						<input class="form-control" type="text" name="Existencia_actual" id = "Existencia_actual" required placeholder="Existencia actual" maxlength="35">
+						<input class="form-control" type="text" name="Existencia_actual" id = "Existencia_actual" required placeholder="Existencia actual" maxlength="35" title="Ingrese solo numeros"  pattern="[0-9]*">
 						<br>
 					</td>
 				</tr>
@@ -100,7 +100,7 @@
 					</th>
 					<td>
 						<br>
-						<input class="form-control" type="text" name="Mult1" id = "Mult1" required placeholder="Precio venta * Existencia actual" maxlength="35" onclick="obtener()">
+						<input class="form-control" type="text" name="Mult1" id = "Mult1" required placeholder="Precio venta * Existencia actual" maxlength="35" onclick="obtener()" title="Ingrese solo numeros"  pattern="[0-9]*">
 						<br>
 					</td>
 				</tr>
@@ -144,7 +144,7 @@
 					</th>
 					<td>
 						<br>
-						<input class="form-control" type="text" name="Mult2" id = "Mult2" required placeholder="Precio compra * Existencia actual" maxlength="35" onclick="obtener2()">
+						<input class="form-control" type="text" name="Mult2" id = "Mult2" required placeholder="Precio compra * Existencia actual" maxlength="35" onclick="obtener2()"title="Ingrese solo numeros"  pattern="[0-9]*">
 						<br>
 					</td>
 				</tr>
